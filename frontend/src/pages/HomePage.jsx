@@ -5,7 +5,7 @@ import FeaturedProducts from "../components/FeaturedProducts";
 
 const categories = [
 	{ href: "/Masks", name: "Sri Lankan Masks", imageUrl: "/Masks.jpg" },
-	{ href: "/t-shirts", name: "Batik", imageUrl: "/Batik.jpg" },
+	{ href: "/Batik", name: "Batik", imageUrl: "/Batik.jpg" },
 	{ href: "/shoes", name: "Sri Lankan Drums", imageUrl: "/Drums.jpg" },
 	{ href: "/glasses", name: "Stone and wood carving", imageUrl: "/WoodCarvings.jpg" },
 	{ href: "/jackets", name: "Handloom", imageUrl: "/Handloom.jpg" },
