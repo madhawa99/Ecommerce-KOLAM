@@ -6,10 +6,10 @@ import FeaturedProducts from "../components/FeaturedProducts";
 const categories = [
 	{ href: "/Masks", name: "Sri Lankan Masks", imageUrl: "/Masks.jpg" },
 	{ href: "/Batik", name: "Batik", imageUrl: "/Batik.jpg" },
-	{ href: "/shoes", name: "Sri Lankan Drums", imageUrl: "/Drums.jpg" },
-	{ href: "/glasses", name: "Stone and wood carving", imageUrl: "/WoodCarvings.jpg" },
-	{ href: "/jackets", name: "Handloom", imageUrl: "/Handloom.jpg" },
-	{ href: "/suits", name: "Coir Products", imageUrl: "/Coir.jpg" },
+	{ href: "/Drums", name: "Sri Lankan Drums", imageUrl: "/Drums.jpg" },
+	{ href: "/Carvings", name: "Stone and wood carving", imageUrl: "/WoodCarvings.jpg" },
+	{ href: "/Handloom", name: "Handloom", imageUrl: "/Handloom.jpg" },
+	{ href: "/Coir", name: "Coir Products", imageUrl: "/Coir.jpg" },
 ];
 
 const HomePage = () => {
@@ -26,7 +26,7 @@ const HomePage = () => {
 					Explore Our Categories
 				</h1>
 				<p className='text-center text-xl text-gray-300 mb-12'>
-				Explore the latest collection of eco-friendl
+				Discover unique, handcrafted items made by local Sri Lankan artisans, celebrating heritage and sustainable craftsmanship.
 				</p>
 
 				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
