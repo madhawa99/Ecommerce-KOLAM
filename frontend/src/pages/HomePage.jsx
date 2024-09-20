@@ -4,13 +4,12 @@ import { useProductStore } from "../stores/useProductStore";
 import FeaturedProducts from "../components/FeaturedProducts";
 
 const categories = [
-	{ href: "/jeans", name: "Wood Carvings Arts", imageUrl: "/WoodCarvings.jpg" },
-	{ href: "/t-shirts", name: "T-shirts", imageUrl: "/tshirts.jpg" },
-	{ href: "/shoes", name: "Shoes", imageUrl: "/shoes.jpg" },
-	{ href: "/glasses", name: "Glasses", imageUrl: "/glasses.png" },
-	{ href: "/jackets", name: "Jackets", imageUrl: "/jackets.jpg" },
-	{ href: "/suits", name: "Suits", imageUrl: "/suits.jpg" },
-	{ href: "/bags", name: "Bags", imageUrl: "/bags.jpg" },
+	{ href: "/Masks", name: "Sri Lankan Masks", imageUrl: "/Masks.jpg" },
+	{ href: "/t-shirts", name: "Batik", imageUrl: "/Batik.jpg" },
+	{ href: "/shoes", name: "Sri Lankan Drums", imageUrl: "/Drums.jpg" },
+	{ href: "/glasses", name: "Stone and wood carving", imageUrl: "/WoodCarvings.jpg" },
+	{ href: "/jackets", name: "Handloom", imageUrl: "/Handloom.jpg" },
+	{ href: "/suits", name: "Coir Products", imageUrl: "/Coir.jpg" },
 ];
 
 const HomePage = () => {
@@ -27,9 +26,7 @@ const HomePage = () => {
 					Explore Our Categories
 				</h1>
 				<p className='text-center text-xl text-gray-300 mb-12'>
-
 				Explore the latest collection of eco-friendl
-
 				</p>
 
 				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
