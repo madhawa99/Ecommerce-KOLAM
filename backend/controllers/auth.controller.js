@@ -1,6 +1,6 @@
 import { redis } from "../lib/redis.js";
 import User from "../models/user.model.js";
-import jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken"; //json web token(provide a scalable way to haddle authentication, authorization and information exchange)
 
 const generateTokens = (userId) => {
 	const accessToken = jwt.sign({ userId }, process.env.ACCESS_TOKEN_SECRET, {
@@ -21,7 +21,7 @@ const storeRefreshToken = async (userId, refreshToken) => {
 const setCookies = (res, accessToken, refreshToken) => {
 	res.cookie("accessToken", accessToken, {
 		httpOnly: true, // prevent XSS attacks, cross site scripting attack
-		secure: process.env.NODE_ENV === "production",
+		secure: process.env.NODE_ENV === "production", //only then it's gonna be true
 		sameSite: "strict", // prevents CSRF attack, cross-site request forgery attack
 		maxAge: 15 * 60 * 1000, // 15 minutes
 	});
@@ -33,6 +33,8 @@ const setCookies = (res, accessToken, refreshToken) => {
 	});
 };
 
+
+//Signup
 export const signup = async (req, res) => {
 	const { email, password, name } = req.body;
 	try {
@@ -61,6 +63,7 @@ export const signup = async (req, res) => {
 	}
 };
 
+//Login
 export const login = async (req, res) => {
 	try {
 		const { email, password } = req.body;
@@ -86,11 +89,12 @@ export const login = async (req, res) => {
 	}
 };
 
+//Logout
 export const logout = async (req, res) => {
 	try {
 		const refreshToken = req.cookies.refreshToken;
 		if (refreshToken) {
-			const decoded = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET);
+			const decoded = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET); // decode the refresh token in order to get maybe userID
 			await redis.del(`refresh_token:${decoded.userId}`);
 		}
 
