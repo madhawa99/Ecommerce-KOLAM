@@ -1,13 +1,15 @@
-import { redis } from "../lib/redis.js";
+import { redis } from "../lib/redis.js"; //store refresh tokens with expiration times.
 import User from "../models/user.model.js";
 import jwt from "jsonwebtoken"; //json web token(provide a scalable way to haddle authentication, authorization and information exchange)
 
+
+//generate both access tokens and refresh tokens for a user using their userId
 const generateTokens = (userId) => {
-	const accessToken = jwt.sign({ userId }, process.env.ACCESS_TOKEN_SECRET, {
+	const accessToken = jwt.sign({ userId }, process.env.ACCESS_TOKEN_SECRET, { //Creates a signed access token with a payload ({ userId }) and a secret stored in environment variables (ACCESS_TOKEN_SECRET). The token expires in 15 minutes.
 		expiresIn: "15m",
 	});
 
-	const refreshToken = jwt.sign({ userId }, process.env.REFRESH_TOKEN_SECRET, {
+	const refreshToken = jwt.sign({ userId }, process.env.REFRESH_TOKEN_SECRET, { //Creates a signed refresh token with a payload ({ userId }). It uses a different secret (REFRESH_TOKEN_SECRET) and expires in 7 days.
 		expiresIn: "7d",
 	});
 
@@ -15,13 +17,13 @@ const generateTokens = (userId) => {
 };
 
 const storeRefreshToken = async (userId, refreshToken) => {
-	await redis.set(`refresh_token:${userId}`, refreshToken, "EX", 7 * 24 * 60 * 60); // 7days
+	await redis.set(`refresh_token:${userId}`, refreshToken, "EX", 7 * 24 * 60 * 60); // 7days //refresh token as the key
 };
 
 const setCookies = (res, accessToken, refreshToken) => {
 	res.cookie("accessToken", accessToken, {
-		httpOnly: true, // prevent XSS attacks, cross site scripting attack
-		secure: process.env.NODE_ENV === "production", //only then it's gonna be true
+		httpOnly: true, // prevent XSS attacks,cross site scripting attack. this cookie cannot be accessed via JS. 
+		secure: process.env.NODE_ENV === "production", //Ensures cookies are only sent over HTTPS in production.(in developement it's HTTP)
 		sameSite: "strict", // prevents CSRF attack, cross-site request forgery attack
 		maxAge: 15 * 60 * 1000, // 15 minutes
 	});
