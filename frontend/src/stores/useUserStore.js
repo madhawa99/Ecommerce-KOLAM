@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import axios from "../lib/axios";
-import { toast } from "react-hot-toast";
+import { toast } from "react-hot-toast"; //tosat is a notiification that we can show it to the user
 
 export const useUserStore = create((set, get) => ({
 	user: null,

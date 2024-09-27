@@ -44,7 +44,7 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route path='/' element={<HomePage />} />
-					<Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to='/' />} />
+					<Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to='/' />} /> {/*if user is not authenticated => show signup page, otherwise => show home page go to HomePage*/}
 					<Route path='/login' element={!user ? <LoginPage /> : <Navigate to='/' />} />
 					<Route
 						path='/secret-dashboard'
