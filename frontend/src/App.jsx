@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
+import AboutUs from './pages/AboutUs';
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import AdminPage from "./pages/AdminPage";
@@ -44,6 +45,7 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route path='/' element={<HomePage />} />
+					<Route path='/about' element={<AboutUs />} />
 					<Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to='/' />} /> {/*if user is not authenticated => show signup page, otherwise => show home page go to HomePage*/}
 					<Route path='/login' element={!user ? <LoginPage /> : <Navigate to='/' />} />
 					<Route

@@ -17,7 +17,7 @@ const generateTokens = (userId) => {
 };
 
 const storeRefreshToken = async (userId, refreshToken) => {
-	await redis.set(`refresh_token:${userId}`, refreshToken, "EX", 7 * 24 * 60 * 60); // 7days //refresh token as the key
+	await redis.set(`refresh_token:${userId}`, refreshToken, "EX", 7 * 24 * 60 * 60); // 7days //refresh_token as the key
 };
 
 const setCookies = (res, accessToken, refreshToken) => {
