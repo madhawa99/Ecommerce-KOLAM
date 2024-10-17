@@ -1,5 +1,5 @@
-import { create } from "zustand";
-import axios from "../lib/axios";
+import { create } from "zustand"; //global state management
+import axios from "../lib/axios"; //connect with backend
 import { toast } from "react-hot-toast"; //tosat is a notiification that we can show it to the user
 
 export const useUserStore = create((set, get) => ({
@@ -72,7 +72,7 @@ export const useUserStore = create((set, get) => ({
 	},
 }));
 
-// TODO: Implement the axios interceptors for refreshing access token
+
 
 // Axios interceptor for token refresh
 let refreshPromise = null;

@@ -29,6 +29,12 @@ const Navbar = () => {
 						>
 							Home
 						</Link>
+						<Link
+							to={"/about"}
+							className='text-gray-300 hover:text-cyan-400 transition duration-300 ease-in-out'
+						>
+							About Us
+						</Link>
 						{user && (
 							<Link
 								to={"/cart"}
