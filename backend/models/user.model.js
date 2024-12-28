@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema(
 	{
 		name: {
 			type: String,
-			required: [true, "Name is required"], //custome error msg
+			required: [true, "Name is required"], //custom error msg
 		},
 		email: {
 			type: String,
@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema(
 		],
 		role: {
 			type: String,
-			enum: ["customer", "admin"],
+			enum: ["customer", "admin","seller"],
 			default: "customer",
 		},
 	},

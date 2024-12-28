@@ -9,14 +9,14 @@ const fadeInUp = {
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="">
       {/* Hero Section with Motion */}
       <motion.div
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.8 }}
         variants={fadeInUp}
-        className="bg-gradient-to-r from-blue-600 to-teal-400 py-16"
+        className=""
       >
         <div className="container mx-auto px-6 text-center">
           <motion.h1
@@ -35,7 +35,7 @@ const AboutUs = () => {
             variants={fadeInUp}
             className="text-lg text-gray-100 mt-4 max-w-2xl mx-auto"
           >
-           At Sokari, we proudly connect Sri Lankan artisans with those who value authentic, handmade creations. Our platform showcases a wide range of traditional and contemporary crafts, helping preserve local craftsmanship while supporting talented makers. By choosing [Marketplace Name], you are supporting the artisans and their timeless heritage, contributing to a sustainable future for Sri Lanka's creative community.
+           At Sokari , we proudly connect Sri Lankan artisans with those who value authentic, handmade creations. Our platform showcases a wide range of traditional and contemporary crafts, helping preserve local craftsmanship while supporting talented makers. By choosing [Marketplace Name], you are supporting the artisans and their timeless heritage, contributing to a sustainable future for Sri Lanka's creative community.
           </motion.p>
         </div>
       </motion.div>
@@ -54,7 +54,7 @@ const AboutUs = () => {
           animate="visible"
           transition={{ duration: 0.8 }}
           variants={fadeInUp}
-          className="text-4xl font-bold text-gray-800"
+          className="text-4xl font-bold text-white-800"
         >
           Our Mission
         </motion.h2>
@@ -63,14 +63,14 @@ const AboutUs = () => {
           animate="visible"
           transition={{ duration: 0.9, delay: 0.3 }}
           variants={fadeInUp}
-          className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto"
+          className="text-lg text-white-600 mt-6 max-w-2xl mx-auto"
         >
         Our mission at Sokari is to uplift and empower Sri Lankan artisans by providing them with a platform to share their craftsmanship with the world. We strive to preserve traditional skills while encouraging innovation, ensuring that local artisans thrive in a modern marketplace. By fostering sustainable and ethical practices, we aim to create a lasting impact on the artisan community, promoting cultural heritage and supporting livelihoods.    
         </motion.p>
       </motion.section>
 
       {/* Team Section with Motion */}
-      <section className="bg-white py-16 px-6 container mx-auto">
+      <section className="">
         {/* "Meet Our Team" with Motion */}
         <motion.h2
           initial="hidden"
@@ -78,7 +78,7 @@ const AboutUs = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
           variants={fadeInUp}
-          className="text-3xl font-bold text-center text-gray-800 mb-12"
+          className="text-3xl font-bold text-center text-white-800 mb-12"
         >
           Meet Our Team
         </motion.h2>
@@ -95,7 +95,7 @@ const AboutUs = () => {
           >
             <img
               className="w-full h-48 object-cover"
-              src="https://via.placeholder.com/300"
+              src="./images/Madhawa.jpg"
               alt="Team Member"
             />
             <div className="p-6">
@@ -115,7 +115,7 @@ const AboutUs = () => {
           >
             <img
               className="w-full h-48 object-cover"
-              src="/Ishan.jpg"
+              src="./images/ishan.jpg"
               alt="Team Member"
             />
             <div className="p-6">
@@ -135,7 +135,7 @@ const AboutUs = () => {
           >
             <img
               className="w-full h-48 object-cover"
-              src="https://via.placeholder.com/300"
+              src="./images/Nirodha.jpg"
               alt="Team Member"
             />
             <div className="p-6">
@@ -155,7 +155,7 @@ const AboutUs = () => {
           >
             <img
               className="w-full h-48 object-cover"
-              src="https://via.placeholder.com/300"
+              src="./images/Chamudhi.jpg"
               alt="Team Member"
             />
             <div className="p-6">
@@ -167,7 +167,7 @@ const AboutUs = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-blue-600 py-16 text-white text-center">
+      <section className="py-16 text-white text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold">Join Us on Our Journey</h2>
           <p className="text-lg mt-6 max-w-2xl mx-auto">
