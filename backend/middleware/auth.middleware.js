@@ -39,3 +39,11 @@ export const adminRoute = (req, res, next) => {
 		return res.status(403).json({ message: "Access denied - Admin only" });
 	}
 };
+
+export const sellerRoute = (req, res, next) => {
+	if (req.user && req.user.role === "seller") {
+		next();
+	} else {
+		return res.status(403).json({ message: "Access denied - seller only" });
+	}
+};
