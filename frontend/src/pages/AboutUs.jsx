@@ -24,7 +24,7 @@ const AboutUs = () => {
             animate="visible"
             transition={{ duration: 0.8 }}
             variants={fadeInUp}
-            className="text-5xl font-bold text-white"
+            className="text-5xl font-bold text-teal-400"
           >
             About Us
           </motion.h1>
@@ -54,7 +54,7 @@ const AboutUs = () => {
           animate="visible"
           transition={{ duration: 0.8 }}
           variants={fadeInUp}
-          className="text-4xl font-bold text-white-800"
+          className="text-5xl font-bold text-teal-400"
         >
           Our Mission
         </motion.h2>
