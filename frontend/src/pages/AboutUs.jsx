@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 // Animation variants for section headers and paragraphs
 const fadeInUp = {
@@ -173,9 +174,11 @@ const AboutUs = () => {
           <p className="text-lg mt-6 max-w-2xl mx-auto">
             We are always looking for talented, passionate individuals to join our growing team. Be a part of a company that values innovation, creativity, and collaboration.
           </p>
-          <button className="mt-8 px-8 py-4 bg-teal-400 text-white font-semibold rounded-lg shadow-lg hover:bg-teal-500 transition">
-            Contact Us
-          </button>
+          <Link to="/contact">
+            <button className="mt-8 px-8 py-4 bg-teal-400 text-white font-semibold rounded-lg shadow-lg hover:bg-teal-500 transition">
+              Contact Us
+            </button>
+          </Link>
         </div>
       </section>
     </div>
