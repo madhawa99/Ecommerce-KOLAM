@@ -8,6 +8,7 @@ import AdminPage from "./pages/AdminPage";
 import CategoryPage from "./pages/CategoryPage";
 import SellerPage from "./pages/SellerPage";
 import FAQPage from "./pages/FaqPage";
+import ContactUsPage from "./pages/ContactUsPage";
 
 import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
@@ -49,6 +50,7 @@ function App() {
 					<Route path='/' element={<HomePage />} />
 					<Route path='/about' element={<AboutUs />} />
 					<Route path="/faq" element={<FAQPage />} />
+					<Route path='/contact' element={<ContactUsPage />} />
 					<Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to='/' />} /> {/*if user is not authenticated => show signup page, otherwise => show home page go to HomePage*/}
 					<Route path='/login' element={!user ? <LoginPage /> : <Navigate to='/' />} />
 					<Route

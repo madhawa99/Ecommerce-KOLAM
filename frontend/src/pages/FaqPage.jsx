@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 // Animation variants
 const fadeInUp = {
@@ -11,24 +12,29 @@ const FAQPage = () => {
   const [faqs, setFaqs] = useState([
     {
       question: "What is Sokari?",
-      answer: "Sokari is a platform that connects skilled artisans with customers looking for unique, handmade products."
+      answer:
+        "Sokari is a platform that connects skilled artisans with customers looking for unique, handmade products.",
     },
     {
       question: "How do I purchase products on Sokari?",
-      answer: "You can browse our collection, add items to your cart, and proceed to checkout. Our platform supports secure payment options."
+      answer:
+        "You can browse our collection, add items to your cart, and proceed to checkout. Our platform supports secure payment options.",
     },
     {
       question: "Can I sell my handmade products on Sokari?",
-      answer: "Yes! Sokari welcomes artisans to join our platform. Sign up as a seller to get started."
+      answer:
+        "Yes! Sokari welcomes artisans to join our platform. Sign up as a seller to get started.",
     },
     {
       question: "What payment methods are accepted?",
-      answer: "We accept major credit cards, debit cards, and other secure online payment methods."
+      answer:
+        "We accept major credit cards, debit cards, and other secure online payment methods.",
     },
     {
       question: "How do I contact customer support?",
-      answer: "You can reach our support team through the 'Contact Us' button at the bottom of the page."
-    }
+      answer:
+        "You can reach our support team through the 'Contact Us' button at the bottom of the page.",
+    },
   ]);
 
   return (
@@ -58,7 +64,8 @@ const FAQPage = () => {
             variants={fadeInUp}
             className="text-lg text-gray-300 mt-4 max-w-2xl mx-auto"
           >
-            Find answers to the most commonly asked questions about Sokari, our artisans, and the platform.
+            Find answers to the most commonly asked questions about Sokari, our
+            artisans, and the platform.
           </motion.p>
         </div>
       </motion.div>
@@ -108,15 +115,18 @@ const FAQPage = () => {
             variants={fadeInUp}
             className="text-lg text-gray-300 mt-6 max-w-2xl mx-auto"
           >
-            If your question isn't listed here, feel free to contact us. Our support team is happy to help.
+            If your question isn't listed here, feel free to contact us. Our
+            support team is happy to help.
           </motion.p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-8 px-8 py-4 bg-teal-400 text-white font-semibold rounded-lg shadow-lg hover:bg-teal-500 transition"
-          >
-            Contact Us
-          </motion.button>
+          <Link to="/contact">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-8 px-8 py-4 bg-teal-400 text-white font-semibold rounded-lg shadow-lg hover:bg-teal-500 transition"
+            >
+              Contact Us
+            </motion.button>
+          </Link>
         </div>
       </section>
     </div>
